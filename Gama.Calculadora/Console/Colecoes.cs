@@ -131,6 +131,9 @@ namespace Gama.Calculadora.Console
             };
             var resultado = nomes.SingleOrDefault(item => item == "Priscila");
             //var resultado = nomes.Single(item => item == "Priscila");
+            //var resultado = nomes.Where(item => item == "Priscila")
+            //.Skip(10)
+            //.Take(10);
 
             System.Console.WriteLine(resultado);
 
