@@ -1,11 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Gama.RedeSocial.Domain.Entities
+﻿namespace Gama.RedeSocial.Domain.Entities
 {
-    public class Midia
+    public class Midia : BaseEntity
     {
+        public Midia()
+        {
+            MidiaType = new MidiaType();
+        }
         public MidiaType MidiaType { get; set; }
+
+        public string Path { get; set; }
+
+        //se quiser, depois coloca a descrição
     }
 }
