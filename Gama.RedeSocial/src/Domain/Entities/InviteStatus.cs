@@ -3,5 +3,6 @@
     public class InviteStatus : BaseEntity
     {
         public string Description { get; set; }
+
     }
 }
