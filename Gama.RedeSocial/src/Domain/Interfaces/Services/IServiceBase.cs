@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Gama.RedeSocial.Domain.Interfaces.Services
 {
-    interface IServiceBase<T> : IBase<T> where T : BaseEntity
+    public interface IServiceBase<T> : IBase<T> where T : BaseEntity
     {
     }
 }
