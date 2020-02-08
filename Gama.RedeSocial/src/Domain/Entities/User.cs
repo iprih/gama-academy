@@ -3,7 +3,7 @@
 
 namespace Gama.RedeSocial.Domain.Entities
 {
-    class User : BaseEntity
+    public class User : BaseEntity
     {
         public User()
         {
