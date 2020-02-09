@@ -18,6 +18,8 @@ namespace Gama.RedeSocial.Domain.Entities
         public DateTime DateUpdated { get; set; }
         public bool Active { get; set; }
 
+        public abstract void Validate();
+
     }
 
 }

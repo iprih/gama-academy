@@ -1,4 +1,5 @@
-﻿using Dommel;
+﻿using Dapper;
+using Dommel;
 using Gama.RedeSocial.Domain.Entities;
 using Gama.RedeSocial.Domain.Interfaces.Repositories;
 using System;
@@ -16,6 +17,22 @@ namespace Repository
             {
                 return cn.Delete(id);
             }           
+        }
+
+        public void Execute(string sql, object parameters)
+        {
+            using (var db = SqlConnectionFactory.Create())
+            {
+                db.Query(sql, parameters);
+            }
+        }
+
+        public IEnumerable<T> Execute<T>(string sql, object parameters)
+        {
+            using (var db = SqlConnectionFactory.Create())
+            {
+                return db.Query<T>(sql, parameters);
+            }
         }
 
         public IEnumerable<T> Get(Expression<Func<T, bool>> predicate)
